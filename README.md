@@ -12,8 +12,8 @@ Create `.eslintrc` file with this content
 
 ```json
 {
-	"extends": [
-		"@openregion"
-	]
+  "extends": [
+    "@openregion"
+  ]
 }
 ```
