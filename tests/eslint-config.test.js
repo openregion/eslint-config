@@ -62,6 +62,15 @@ test("reports React hooks violations in TSX", async () => {
   assert.ok(ruleIds(messages).includes("react-hooks/rules-of-hooks"));
 });
 
+test("reports React replacement rules in TSX", async () => {
+  const messages = await lint(
+    "export function List() {\n  return <>{[1, 2].map((value) => <span>{value}</span>)}</>;\n}\n",
+    "sample.tsx",
+  );
+
+  assert.ok(ruleIds(messages).includes("@eslint-react/no-missing-key"));
+});
+
 test("parses TSX without requiring React in scope", async () => {
   const messages = await lint(
     "type Props = { title: string };\nexport function Title({ title }: Props) {\n  return <h1>{title}</h1>;\n}\n",
