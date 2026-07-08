@@ -2,6 +2,11 @@
   "name": "@openregion/eslint-config",
   "version": "1.0.0",
   "description": "ESLint shared config",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
   "scripts": {
     "test": "node --test"
   },
@@ -14,7 +19,6 @@
 		"typescript",
 		"styleguide"
   ],
-	"main": "index.js",
   "homepage": "https://github.com/openregion/eslint-config#readme",
   "author": {
 		"name": "Alexander Kupriyanov",
@@ -24,12 +28,25 @@
     "type": "git",
     "url": "https://github.com/openregion/eslint-config.git"
   },
-	"dependencies" : {
-		"eslint-config-airbnb": "^19.0.4",
-		"eslint-import-resolver-typescript": "^3.6.3"
-	},
-	"peerDependencies": {
-		"eslint": "^8.57.0",
-		"typescript-eslint": "^8.4.0"
-	}
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
+  "dependencies": {
+    "@eslint-react/eslint-plugin": "^5.12.0",
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint-import-resolver-typescript": "^3.10.1",
+    "eslint-plugin-import-x": "^4.17.1",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.7.0",
+    "typescript-eslint": "^8.63.0"
+  },
+  "peerDependencies": {
+    "eslint": "^10.0.0",
+    "typescript": ">=4.8.4 <6.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.6.0",
+    "typescript": "^6.0.3"
+  }
 }
