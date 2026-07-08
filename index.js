@@ -9,6 +9,7 @@ import tseslint from "typescript-eslint";
 import { legacyAirbnbRules } from "./rules/legacy-airbnb-rules.js";
 
 const sourceFiles = ["**/*.{js,mjs,cjs,jsx,ts,tsx}"];
+const tsFiles = ["**/*.{ts,tsx}"];
 const jsxFiles = ["**/*.{jsx,tsx}"];
 
 const projectGlobals = {
@@ -69,6 +70,11 @@ const localTypeScriptRules = {
   "@typescript-eslint/no-unused-vars": "warn",
 };
 
+const scopedTypeScriptConfigs = tseslint.configs.recommended.map((config) => ({
+  ...config,
+  files: tsFiles,
+}));
+
 export default defineConfig([
   js.configs.recommended,
   importX.flatConfigs.recommended,
@@ -93,10 +99,12 @@ export default defineConfig([
     },
     rules: localBaseRules,
   },
-  ...tseslint.configs.recommended,
-  importX.flatConfigs.typescript,
+  ...scopedTypeScriptConfigs,
   {
-    files: sourceFiles,
+    files: tsFiles,
+    extends: [
+      importX.flatConfigs.typescript,
+    ],
     rules: localTypeScriptRules,
   },
   {

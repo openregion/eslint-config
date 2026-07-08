@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { ESLint } from "eslint";
-import openregion from "../index.js";
+import openregion from "@openregion/eslint-config";
 
 const eslint = new ESLint({
   overrideConfigFile: true,
@@ -34,6 +34,14 @@ test("reports TypeScript unused variables as warnings", async () => {
   const unusedMessage = messages.find((message) => message.ruleId === "@typescript-eslint/no-unused-vars");
 
   assert.equal(unusedMessage?.severity, 1);
+});
+
+test("keeps TypeScript rules scoped to TypeScript files", async () => {
+  const jsConfig = await eslint.calculateConfigForFile("sample.js");
+  const tsConfig = await eslint.calculateConfigForFile("sample.ts");
+
+  assert.equal(jsConfig.rules["@typescript-eslint/no-unused-vars"], undefined);
+  assert.equal(tsConfig.rules["@typescript-eslint/no-unused-vars"]?.[0], 1);
 });
 
 test("reports duplicate imports with import-x", async () => {
