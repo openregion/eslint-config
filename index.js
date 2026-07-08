@@ -3,10 +3,15 @@ import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import { defineConfig } from "eslint/config";
 import importX from "eslint-plugin-import-x";
+import jsxA11yX from "eslint-plugin-jsx-a11y-x";
 import reactHooks from "eslint-plugin-react-hooks";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import { legacyAirbnbRules } from "./rules/legacy-airbnb-rules.js";
+import {
+  legacyAirbnbRules,
+  legacyJsxA11yXRules,
+  legacyReactReplacementRules,
+} from "./rules/legacy-airbnb-rules.js";
 
 const sourceFiles = ["**/*.{js,mjs,cjs,jsx,ts,tsx}"];
 const tsFiles = ["**/*.{ts,tsx}"];
@@ -113,9 +118,12 @@ export default defineConfig([
       eslintReact.configs.recommended,
       eslintReact.configs.jsx,
       eslintReact.configs.dom,
+      jsxA11yX.configs.recommended,
       reactHooks.configs.flat.recommended,
     ],
     rules: {
+      ...legacyJsxA11yXRules,
+      ...legacyReactReplacementRules,
       "@eslint-react/error-boundaries": "off",
       "@eslint-react/exhaustive-deps": "off",
       "@eslint-react/purity": "off",

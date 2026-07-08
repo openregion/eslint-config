@@ -35,25 +35,30 @@ Notable changes:
 - `eslint-plugin-import` rules are replaced with `eslint-plugin-import-x` rules.
 - Deprecated stylistic rules from the old Airbnb-derived config are moved to `@stylistic/eslint-plugin` when a maintained rule exists.
 - `eslint-plugin-react` is replaced with `@eslint-react/eslint-plugin` for ESLint 10 compatibility.
-- `eslint-plugin-jsx-a11y` is not included because its current peer dependency range does not support ESLint 10.
+- `eslint-plugin-jsx-a11y` is replaced with `eslint-plugin-jsx-a11y-x` because the upstream package does not currently peer ESLint 10.
 - `react/jsx-filename-extension`, `react/prop-types`, `react/forbid-prop-types`, and `react/require-default-props` are intentionally dropped. The current best practice for this shared config is TypeScript component typing instead of PropTypes/defaultProps linting.
 
 ## Legacy rule handling
 
-The old Airbnb-derived effective config is captured in `rules/legacy-airbnb-rules.js`. That generated file has two exports:
+The old Airbnb-derived effective config is captured in `rules/legacy-airbnb-rules.js`. That generated file exports:
 
 - `legacyAirbnbRules`: rules carried forward directly or through maintained rule namespaces such as `@stylistic/*` and `import-x/*`.
-- `droppedLegacyRuleNotes`: legacy rule IDs that could not be copied 1:1. Some entries are true drops; others are handled by replacement layers with current rule IDs.
+- `legacyJsxA11yXRules`: old active `jsx-a11y/*` settings rewritten to `jsx-a11y-x/*`.
+- `legacyReactReplacementRules`: old active React rules rewritten to safe `@eslint-react/*` and `@stylistic/*` replacements.
+- `legacyRuleReplacementNotes`: legacy rule IDs that moved, were renamed, or have an optional modern replacement.
+- `droppedLegacyRuleNotes`: remaining true drops after checking current compatible packages.
 
 Non-verbatim replacements:
 
 - `@typescript-eslint/*` legacy IDs are handled by current `typescript-eslint` flat recommended rules plus local TypeScript overrides.
 - `react-hooks/rules-of-hooks` and `react-hooks/exhaustive-deps` are handled by current `eslint-plugin-react-hooks` flat recommended rules.
+- `jsx-a11y/*` behavior is handled where a maintained rule exists by `eslint-plugin-jsx-a11y-x` under the `jsx-a11y-x/*` namespace.
 - `react/*` behavior is handled where practical by `@eslint-react/eslint-plugin` recommended, JSX, and DOM presets. Examples include `react/jsx-key` through `@eslint-react/no-missing-key`, `react/no-direct-mutation-state` through `@eslint-react/no-direct-mutation-state`, `react/no-array-index-key` through `@eslint-react/no-array-index-key`, and DOM safety checks through `@eslint-react/dom-*`.
+- JSX formatting rules that moved out of `eslint-plugin-react` are handled through `@stylistic/*` where the replacement is not deprecated.
+- Removed JSDoc core rules have a compatible optional path through `eslint-plugin-jsdoc`; this package does not install it because the legacy `require-jsdoc` and `valid-jsdoc` rules were disabled.
 
 Intentional drops:
 
-- `jsx-a11y/*` is omitted until `eslint-plugin-jsx-a11y` supports ESLint 10 in its peer range.
+- Deprecated or disabled `jsx-a11y/*` rules without a `jsx-a11y-x/*` replacement, such as `accessible-emoji` and `no-onchange`, are not carried forward.
 - `react/jsx-filename-extension`, `react/prop-types`, `react/forbid-prop-types`, `react/require-default-props`, and related PropTypes/defaultProps checks are dropped in favor of TypeScript component typing.
-- `require-jsdoc` and `valid-jsdoc` are removed ESLint core rules and are not replaced.
 - Remaining legacy `react/*` style, class-era lifecycle, sorting, and preference rules without a selected `@eslint-react` equivalent are not carried 1:1.

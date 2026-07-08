@@ -1783,164 +1783,976 @@ export const legacyAirbnbRules = {
   ]
 };
 
+export const legacyJsxA11yXRules = {
+  "jsx-a11y-x/alt-text": [
+    "error",
+    {
+      "elements": [
+        "img",
+        "object",
+        "area",
+        "input[type=\"image\"]"
+      ],
+      "img": [],
+      "object": [],
+      "area": [],
+      "input[type=\"image\"]": []
+    }
+  ],
+  "jsx-a11y-x/anchor-has-content": [
+    "error",
+    {
+      "components": []
+    }
+  ],
+  "jsx-a11y-x/anchor-is-valid": [
+    "error",
+    {
+      "components": [
+        "NavLink",
+        "Link"
+      ],
+      "specialLink": [
+        "to"
+      ]
+    }
+  ],
+  "jsx-a11y-x/aria-activedescendant-has-tabindex": [
+    "error"
+  ],
+  "jsx-a11y-x/aria-props": [
+    "error"
+  ],
+  "jsx-a11y-x/aria-proptypes": [
+    "error"
+  ],
+  "jsx-a11y-x/aria-role": [
+    "error",
+    {
+      "ignoreNonDOM": false
+    }
+  ],
+  "jsx-a11y-x/aria-unsupported-elements": [
+    "error"
+  ],
+  "jsx-a11y-x/control-has-associated-label": [
+    "error",
+    {
+      "labelAttributes": [
+        "label"
+      ],
+      "controlComponents": [],
+      "ignoreElements": [
+        "audio",
+        "canvas",
+        "embed",
+        "input",
+        "textarea",
+        "tr",
+        "video"
+      ],
+      "ignoreRoles": [
+        "grid",
+        "listbox",
+        "menu",
+        "menubar",
+        "radiogroup",
+        "row",
+        "tablist",
+        "toolbar",
+        "tree",
+        "treegrid"
+      ],
+      "depth": 5
+    }
+  ],
+  "jsx-a11y-x/heading-has-content": [
+    "error",
+    {
+      "components": [
+        ""
+      ]
+    }
+  ],
+  "jsx-a11y-x/html-has-lang": [
+    "error"
+  ],
+  "jsx-a11y-x/iframe-has-title": [
+    "error"
+  ],
+  "jsx-a11y-x/img-redundant-alt": [
+    "error"
+  ],
+  "jsx-a11y-x/interactive-supports-focus": [
+    "error"
+  ],
+  "jsx-a11y-x/lang": [
+    "error"
+  ],
+  "jsx-a11y-x/media-has-caption": [
+    "error",
+    {
+      "audio": [],
+      "video": [],
+      "track": []
+    }
+  ],
+  "jsx-a11y-x/mouse-events-have-key-events": [
+    "error"
+  ],
+  "jsx-a11y-x/no-access-key": [
+    "error"
+  ],
+  "jsx-a11y-x/no-autofocus": [
+    "error",
+    {
+      "ignoreNonDOM": true
+    }
+  ],
+  "jsx-a11y-x/no-distracting-elements": [
+    "error",
+    {
+      "elements": [
+        "marquee",
+        "blink"
+      ]
+    }
+  ],
+  "jsx-a11y-x/no-interactive-element-to-noninteractive-role": [
+    "error",
+    {
+      "tr": [
+        "none",
+        "presentation"
+      ]
+    }
+  ],
+  "jsx-a11y-x/no-noninteractive-element-interactions": [
+    "error",
+    {
+      "handlers": [
+        "onClick",
+        "onMouseDown",
+        "onMouseUp",
+        "onKeyPress",
+        "onKeyDown",
+        "onKeyUp"
+      ]
+    }
+  ],
+  "jsx-a11y-x/no-noninteractive-element-to-interactive-role": [
+    "error",
+    {
+      "ul": [
+        "listbox",
+        "menu",
+        "menubar",
+        "radiogroup",
+        "tablist",
+        "tree",
+        "treegrid"
+      ],
+      "ol": [
+        "listbox",
+        "menu",
+        "menubar",
+        "radiogroup",
+        "tablist",
+        "tree",
+        "treegrid"
+      ],
+      "li": [
+        "menuitem",
+        "option",
+        "row",
+        "tab",
+        "treeitem"
+      ],
+      "table": [
+        "grid"
+      ],
+      "td": [
+        "gridcell"
+      ]
+    }
+  ],
+  "jsx-a11y-x/no-noninteractive-tabindex": [
+    "error",
+    {
+      "tags": [],
+      "roles": [
+        "tabpanel"
+      ]
+    }
+  ],
+  "jsx-a11y-x/no-redundant-roles": [
+    "error"
+  ],
+  "jsx-a11y-x/no-static-element-interactions": [
+    "error",
+    {
+      "handlers": [
+        "onClick",
+        "onMouseDown",
+        "onMouseUp",
+        "onKeyPress",
+        "onKeyDown",
+        "onKeyUp"
+      ]
+    }
+  ],
+  "jsx-a11y-x/role-has-required-aria-props": [
+    "error"
+  ],
+  "jsx-a11y-x/role-supports-aria-props": [
+    "error"
+  ],
+  "jsx-a11y-x/scope": [
+    "error"
+  ],
+  "jsx-a11y-x/tabindex-no-positive": [
+    "error"
+  ]
+};
+
+export const legacyReactReplacementRules = {
+  "@eslint-react/dom-no-dangerously-set-innerhtml": "warn",
+  "@eslint-react/dom-no-dangerously-set-innerhtml-with-children": "error",
+  "@eslint-react/dom-no-find-dom-node": "error",
+  "@eslint-react/dom-no-missing-button-type": "error",
+  "@eslint-react/dom-no-render-return-value": "error",
+  "@eslint-react/dom-no-script-url": "error",
+  "@eslint-react/dom-no-string-style-prop": "error",
+  "@eslint-react/dom-no-unknown-property": "error",
+  "@eslint-react/dom-no-unsafe-target-blank": "error",
+  "@eslint-react/dom-no-void-elements-with-children": "error",
+  "@eslint-react/jsx-no-children-prop": "error",
+  "@eslint-react/jsx-no-comment-textnodes": "error",
+  "@eslint-react/jsx-no-namespace": "error",
+  "@eslint-react/jsx-no-useless-fragment": "error",
+  "@eslint-react/no-access-state-in-setstate": "error",
+  "@eslint-react/no-array-index-key": "error",
+  "@eslint-react/no-component-will-mount": "error",
+  "@eslint-react/no-component-will-receive-props": "error",
+  "@eslint-react/no-component-will-update": "error",
+  "@eslint-react/no-nested-component-definitions": "error",
+  "@eslint-react/no-set-state-in-component-did-update": "error",
+  "@eslint-react/no-set-state-in-component-will-update": "error",
+  "@eslint-react/no-unsafe-component-will-mount": "error",
+  "@eslint-react/no-unsafe-component-will-receive-props": "error",
+  "@eslint-react/no-unsafe-component-will-update": "error",
+  "@eslint-react/no-unstable-context-value": "error",
+  "@eslint-react/no-unused-class-component-members": "error",
+  "@eslint-react/no-unused-state": "error",
+  "@stylistic/jsx-closing-bracket-location": [
+    "error",
+    "line-aligned"
+  ],
+  "@stylistic/jsx-closing-tag-location": [
+    "error"
+  ],
+  "@stylistic/jsx-curly-brace-presence": [
+    "error",
+    {
+      "props": "never",
+      "children": "never"
+    }
+  ],
+  "@stylistic/jsx-curly-newline": [
+    "error",
+    {
+      "multiline": "consistent",
+      "singleline": "consistent"
+    }
+  ],
+  "@stylistic/jsx-curly-spacing": [
+    "error",
+    "never",
+    {
+      "allowMultiline": true
+    }
+  ],
+  "@stylistic/jsx-equals-spacing": [
+    "error",
+    "never"
+  ],
+  "@stylistic/jsx-first-prop-new-line": [
+    "error",
+    "multiline-multiprop"
+  ],
+  "@stylistic/jsx-indent-props": [
+    "error",
+    2
+  ],
+  "@stylistic/jsx-max-props-per-line": [
+    "error",
+    {
+      "maximum": 1,
+      "when": "multiline"
+    }
+  ],
+  "@stylistic/jsx-one-expression-per-line": [
+    "error",
+    {
+      "allow": "single-child"
+    }
+  ],
+  "@stylistic/jsx-pascal-case": [
+    "error",
+    {
+      "allowAllCaps": true,
+      "ignore": []
+    }
+  ],
+  "@stylistic/jsx-self-closing-comp": [
+    "error"
+  ],
+  "@stylistic/jsx-tag-spacing": [
+    "error",
+    {
+      "closingSlash": "never",
+      "beforeSelfClosing": "always",
+      "afterOpening": "never",
+      "beforeClosing": "never"
+    }
+  ],
+  "@stylistic/jsx-wrap-multilines": [
+    "error",
+    {
+      "declaration": "parens-new-line",
+      "assignment": "parens-new-line",
+      "return": "parens-new-line",
+      "arrow": "parens-new-line",
+      "condition": "parens-new-line",
+      "logical": "parens-new-line",
+      "prop": "parens-new-line"
+    }
+  ]
+};
+
+export const legacyRuleReplacementNotes = {
+  "jsx-a11y/anchor-is-valid": {
+    "replacement": "jsx-a11y-x/anchor-is-valid",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/click-events-have-key-events": {
+    "replacement": "jsx-a11y-x/click-events-have-key-events",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace; its recommended preset enables this rule."
+  },
+  "@typescript-eslint/explicit-function-return-type": {
+    "replacement": "@typescript-eslint/explicit-function-return-type",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-namespace": {
+    "replacement": "@typescript-eslint/no-namespace",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "jsx-a11y/label-has-associated-control": {
+    "replacement": "jsx-a11y-x/label-has-associated-control",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace; its recommended preset enables this rule."
+  },
+  "@typescript-eslint/no-use-before-define": {
+    "replacement": "@typescript-eslint/no-use-before-define",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-unused-vars": {
+    "replacement": "@typescript-eslint/no-unused-vars",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/space-before-function-paren": {
+    "replacement": "@stylistic/space-before-function-paren",
+    "status": "available-not-enabled",
+    "note": "The TypeScript stylistic rule was removed; @stylistic owns the maintained replacement, and the legacy rule was disabled."
+  },
+  "@typescript-eslint/ban-ts-comment": {
+    "replacement": "@typescript-eslint/ban-ts-comment",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-array-constructor": {
+    "replacement": "@typescript-eslint/no-array-constructor",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-duplicate-enum-values": {
+    "replacement": "@typescript-eslint/no-duplicate-enum-values",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-empty-object-type": {
+    "replacement": "@typescript-eslint/no-empty-object-type",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-explicit-any": {
+    "replacement": "@typescript-eslint/no-explicit-any",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-extra-non-null-assertion": {
+    "replacement": "@typescript-eslint/no-extra-non-null-assertion",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-misused-new": {
+    "replacement": "@typescript-eslint/no-misused-new",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-non-null-asserted-optional-chain": {
+    "replacement": "@typescript-eslint/no-non-null-asserted-optional-chain",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-require-imports": {
+    "replacement": "@typescript-eslint/no-require-imports",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-this-alias": {
+    "replacement": "@typescript-eslint/no-this-alias",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-unnecessary-type-constraint": {
+    "replacement": "@typescript-eslint/no-unnecessary-type-constraint",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-unsafe-declaration-merging": {
+    "replacement": "@typescript-eslint/no-unsafe-declaration-merging",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-unsafe-function-type": {
+    "replacement": "@typescript-eslint/no-unsafe-function-type",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-unused-expressions": {
+    "replacement": "@typescript-eslint/no-unused-expressions",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/no-wrapper-object-types": {
+    "replacement": "@typescript-eslint/no-wrapper-object-types",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/prefer-as-const": {
+    "replacement": "@typescript-eslint/prefer-as-const",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/prefer-namespace-keyword": {
+    "replacement": "@typescript-eslint/prefer-namespace-keyword",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "@typescript-eslint/triple-slash-reference": {
+    "replacement": "@typescript-eslint/triple-slash-reference",
+    "status": "active",
+    "note": "The current typescript-eslint flat config exposes this rule under the same rule ID."
+  },
+  "react-hooks/rules-of-hooks": {
+    "replacement": "react-hooks/rules-of-hooks",
+    "status": "active",
+    "note": "eslint-plugin-react-hooks supports the rule under the same rule ID and is applied through its flat recommended config."
+  },
+  "react-hooks/exhaustive-deps": {
+    "replacement": "react-hooks/exhaustive-deps",
+    "status": "active",
+    "note": "eslint-plugin-react-hooks supports the rule under the same rule ID and is applied through its flat recommended config."
+  },
+  "jsx-a11y/alt-text": {
+    "replacement": "jsx-a11y-x/alt-text",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/anchor-has-content": {
+    "replacement": "jsx-a11y-x/anchor-has-content",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/aria-activedescendant-has-tabindex": {
+    "replacement": "jsx-a11y-x/aria-activedescendant-has-tabindex",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/aria-props": {
+    "replacement": "jsx-a11y-x/aria-props",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/aria-proptypes": {
+    "replacement": "jsx-a11y-x/aria-proptypes",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/aria-role": {
+    "replacement": "jsx-a11y-x/aria-role",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/aria-unsupported-elements": {
+    "replacement": "jsx-a11y-x/aria-unsupported-elements",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/autocomplete-valid": {
+    "replacement": "jsx-a11y-x/autocomplete-valid",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace; its recommended preset enables this rule."
+  },
+  "jsx-a11y/control-has-associated-label": {
+    "replacement": "jsx-a11y-x/control-has-associated-label",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/heading-has-content": {
+    "replacement": "jsx-a11y-x/heading-has-content",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/html-has-lang": {
+    "replacement": "jsx-a11y-x/html-has-lang",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/iframe-has-title": {
+    "replacement": "jsx-a11y-x/iframe-has-title",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/img-redundant-alt": {
+    "replacement": "jsx-a11y-x/img-redundant-alt",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/interactive-supports-focus": {
+    "replacement": "jsx-a11y-x/interactive-supports-focus",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/lang": {
+    "replacement": "jsx-a11y-x/lang",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/media-has-caption": {
+    "replacement": "jsx-a11y-x/media-has-caption",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/mouse-events-have-key-events": {
+    "replacement": "jsx-a11y-x/mouse-events-have-key-events",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/no-access-key": {
+    "replacement": "jsx-a11y-x/no-access-key",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/no-autofocus": {
+    "replacement": "jsx-a11y-x/no-autofocus",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/no-distracting-elements": {
+    "replacement": "jsx-a11y-x/no-distracting-elements",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/no-interactive-element-to-noninteractive-role": {
+    "replacement": "jsx-a11y-x/no-interactive-element-to-noninteractive-role",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/no-noninteractive-element-interactions": {
+    "replacement": "jsx-a11y-x/no-noninteractive-element-interactions",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/no-noninteractive-element-to-interactive-role": {
+    "replacement": "jsx-a11y-x/no-noninteractive-element-to-interactive-role",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/no-noninteractive-tabindex": {
+    "replacement": "jsx-a11y-x/no-noninteractive-tabindex",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/no-redundant-roles": {
+    "replacement": "jsx-a11y-x/no-redundant-roles",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/no-static-element-interactions": {
+    "replacement": "jsx-a11y-x/no-static-element-interactions",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/role-has-required-aria-props": {
+    "replacement": "jsx-a11y-x/role-has-required-aria-props",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/role-supports-aria-props": {
+    "replacement": "jsx-a11y-x/role-supports-aria-props",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/scope": {
+    "replacement": "jsx-a11y-x/scope",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/tabindex-no-positive": {
+    "replacement": "jsx-a11y-x/tabindex-no-positive",
+    "status": "active",
+    "note": "eslint-plugin-jsx-a11y-x provides an ESLint 10-compatible rule under the jsx-a11y-x namespace."
+  },
+  "jsx-a11y/label-has-for": {
+    "replacement": "jsx-a11y-x/label-has-associated-control",
+    "status": "obsolete-alias-not-enabled",
+    "note": "The legacy rule was disabled and was superseded by label-has-associated-control."
+  },
+  "react/display-name": {
+    "replacement": "@eslint-react/no-missing-component-display-name",
+    "status": "available-not-enabled",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin; the legacy rule was disabled."
+  },
+  "react/jsx-closing-bracket-location": {
+    "replacement": "@stylistic/jsx-closing-bracket-location",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-closing-tag-location": {
+    "replacement": "@stylistic/jsx-closing-tag-location",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-curly-spacing": {
+    "replacement": "@stylistic/jsx-curly-spacing",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-indent-props": {
+    "replacement": "@stylistic/jsx-indent-props",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-key": {
+    "replacement": "@eslint-react/no-missing-key",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace; the recommended preset enables it."
+  },
+  "react/jsx-max-props-per-line": {
+    "replacement": "@stylistic/jsx-max-props-per-line",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-pascal-case": {
+    "replacement": "@stylistic/jsx-pascal-case",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-sort-props": {
+    "replacement": "@stylistic/jsx-sort-props",
+    "status": "available-not-enabled",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/no-danger": {
+    "replacement": "@eslint-react/dom-no-dangerously-set-innerhtml",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-deprecated": {
+    "replacement": [
+      "@eslint-react/no-component-will-mount",
+      "@eslint-react/no-component-will-receive-props",
+      "@eslint-react/no-component-will-update",
+      "@eslint-react/no-unsafe-component-will-mount",
+      "@eslint-react/no-unsafe-component-will-receive-props",
+      "@eslint-react/no-unsafe-component-will-update"
+    ],
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-did-mount-set-state": {
+    "replacement": "@eslint-react/no-set-state-in-component-did-mount",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace; the recommended preset enables it."
+  },
+  "react/no-did-update-set-state": {
+    "replacement": "@eslint-react/no-set-state-in-component-did-update",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-will-update-set-state": {
+    "replacement": "@eslint-react/no-set-state-in-component-will-update",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-direct-mutation-state": {
+    "replacement": "@eslint-react/no-direct-mutation-state",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace; the recommended preset enables it."
+  },
+  "react/no-unknown-property": {
+    "replacement": "@eslint-react/dom-no-unknown-property",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/self-closing-comp": {
+    "replacement": "@stylistic/jsx-self-closing-comp",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-wrap-multilines": {
+    "replacement": "@stylistic/jsx-wrap-multilines",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-first-prop-new-line": {
+    "replacement": "@stylistic/jsx-first-prop-new-line",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-equals-spacing": {
+    "replacement": "@stylistic/jsx-equals-spacing",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-indent": {
+    "replacement": "@stylistic/indent",
+    "status": "active",
+    "note": "The deprecated @stylistic/jsx-indent replacement was not enabled; @stylistic recommends the active unified indent rule."
+  },
+  "react/jsx-no-target-blank": {
+    "replacement": "@eslint-react/dom-no-unsafe-target-blank",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/jsx-no-comment-textnodes": {
+    "replacement": "@eslint-react/jsx-no-comment-textnodes",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-render-return-value": {
+    "replacement": "@eslint-react/dom-no-render-return-value",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-find-dom-node": {
+    "replacement": "@eslint-react/dom-no-find-dom-node",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-danger-with-children": {
+    "replacement": "@eslint-react/dom-no-dangerously-set-innerhtml-with-children",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-unused-prop-types": {
+    "replacement": "@eslint-react/no-unused-props",
+    "status": "available-not-enabled",
+    "note": "The maintained @eslint-react replacement requires type-aware parser services, so this shared config does not enable it by default."
+  },
+  "react/style-prop-object": {
+    "replacement": "@eslint-react/dom-no-string-style-prop",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-children-prop": {
+    "replacement": "@eslint-react/jsx-no-children-prop",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/jsx-tag-spacing": {
+    "replacement": "@stylistic/jsx-tag-spacing",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-space-before-closing": {
+    "replacement": "@stylistic/jsx-tag-spacing",
+    "status": "active",
+    "note": "The removed legacy spacing rule is covered by the active @stylistic/jsx-tag-spacing replacement."
+  },
+  "react/no-array-index-key": {
+    "replacement": "@eslint-react/no-array-index-key",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/void-dom-elements-no-children": {
+    "replacement": "@eslint-react/dom-no-void-elements-with-children",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-unused-state": {
+    "replacement": "@eslint-react/no-unused-state",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/jsx-curly-brace-presence": {
+    "replacement": "@stylistic/jsx-curly-brace-presence",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-one-expression-per-line": {
+    "replacement": "@stylistic/jsx-one-expression-per-line",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/no-access-state-in-setstate": {
+    "replacement": "@eslint-react/no-access-state-in-setstate",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/button-has-type": {
+    "replacement": "@eslint-react/dom-no-missing-button-type",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/jsx-child-element-spacing": {
+    "replacement": "@stylistic/jsx-child-element-spacing",
+    "status": "available-not-enabled",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-props-no-multi-spaces": {
+    "replacement": "@stylistic/no-multi-spaces",
+    "status": "active",
+    "note": "The deprecated JSX-specific replacement is covered by the active @stylistic/no-multi-spaces rule."
+  },
+  "react/no-unsafe": {
+    "replacement": [
+      "@eslint-react/no-unsafe-component-will-mount",
+      "@eslint-react/no-unsafe-component-will-receive-props",
+      "@eslint-react/no-unsafe-component-will-update"
+    ],
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace; the recommended preset enables the split unsafe lifecycle rules."
+  },
+  "react/jsx-curly-newline": {
+    "replacement": "@stylistic/jsx-curly-newline",
+    "status": "active",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-no-script-url": {
+    "replacement": "@eslint-react/dom-no-script-url",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/jsx-uses-vars": {
+    "replacement": "ESLint 10 JSX reference tracking",
+    "status": "native-behavior",
+    "note": "ESLint 10 handles JSX identifier references without eslint-plugin-react."
+  },
+  "react/jsx-no-useless-fragment": {
+    "replacement": "@eslint-react/jsx-no-useless-fragment",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/jsx-newline": {
+    "replacement": "@stylistic/jsx-newline",
+    "status": "available-not-enabled",
+    "note": "The JSX formatting rule moved to @stylistic/eslint-plugin."
+  },
+  "react/jsx-no-constructed-context-values": {
+    "replacement": "@eslint-react/no-unstable-context-value",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-unstable-nested-components": {
+    "replacement": "@eslint-react/no-nested-component-definitions",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-namespace": {
+    "replacement": "@eslint-react/jsx-no-namespace",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-invalid-html-attribute": {
+    "replacement": "@eslint-react/dom-no-unknown-property",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "react/no-unused-class-component-methods": {
+    "replacement": "@eslint-react/no-unused-class-component-members",
+    "status": "active",
+    "note": "The maintained React rule now lives in @eslint-react/eslint-plugin with a flattened @eslint-react namespace."
+  },
+  "require-jsdoc": {
+    "replacement": "jsdoc/require-jsdoc",
+    "status": "optional-not-installed",
+    "note": "eslint-plugin-jsdoc is compatible with ESLint 10 and provides the replacement, but the legacy rule was disabled."
+  },
+  "valid-jsdoc": {
+    "replacement": [
+      "jsdoc/valid-types",
+      "jsdoc/check-*"
+    ],
+    "status": "optional-not-installed",
+    "note": "eslint-plugin-jsdoc provides the maintained JSDoc rule family; the removed core rule has no exact single-rule equivalent and was disabled."
+  }
+};
+
 export const droppedLegacyRuleNotes = {
-  "jsx-a11y/anchor-is-valid": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-filename-extension": "Original plugin is not part of the ESLint 10 config.",
-  "react/forbid-prop-types": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-props-no-spreading": "Original plugin is not part of the ESLint 10 config.",
-  "react/prop-types": "Original plugin is not part of the ESLint 10 config.",
-  "react/require-default-props": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/click-events-have-key-events": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/explicit-function-return-type": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-namespace": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/label-has-associated-control": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-use-before-define": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-unused-vars": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/space-before-function-paren": "Original plugin is not part of the ESLint 10 config.",
-  "react/function-component-definition": "Original plugin is not part of the ESLint 10 config.",
-  "react/react-in-jsx-scope": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/ban-ts-comment": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-array-constructor": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-duplicate-enum-values": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-empty-object-type": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-explicit-any": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-extra-non-null-assertion": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-misused-new": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-non-null-asserted-optional-chain": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-require-imports": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-this-alias": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-unnecessary-type-constraint": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-unsafe-declaration-merging": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-unsafe-function-type": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-unused-expressions": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/no-wrapper-object-types": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/prefer-as-const": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/prefer-namespace-keyword": "Original plugin is not part of the ESLint 10 config.",
-  "@typescript-eslint/triple-slash-reference": "Original plugin is not part of the ESLint 10 config.",
-  "react-hooks/rules-of-hooks": "Rule is not available in ESLint 10.",
-  "react-hooks/exhaustive-deps": "Rule is not available in ESLint 10.",
-  "jsx-a11y/accessible-emoji": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/alt-text": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/anchor-has-content": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/aria-activedescendant-has-tabindex": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/aria-props": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/aria-proptypes": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/aria-role": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/aria-unsupported-elements": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/autocomplete-valid": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/control-has-associated-label": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/heading-has-content": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/html-has-lang": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/iframe-has-title": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/img-redundant-alt": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/interactive-supports-focus": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/lang": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/media-has-caption": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/mouse-events-have-key-events": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-access-key": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-autofocus": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-distracting-elements": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-interactive-element-to-noninteractive-role": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-noninteractive-element-interactions": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-noninteractive-element-to-interactive-role": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-noninteractive-tabindex": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-onchange": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-redundant-roles": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/no-static-element-interactions": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/role-has-required-aria-props": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/role-supports-aria-props": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/scope": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/tabindex-no-positive": "Original plugin is not part of the ESLint 10 config.",
-  "jsx-a11y/label-has-for": "Original plugin is not part of the ESLint 10 config.",
-  "react/display-name": "Original plugin is not part of the ESLint 10 config.",
-  "react/forbid-dom-props": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-boolean-value": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-closing-bracket-location": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-closing-tag-location": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-curly-spacing": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-handler-names": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-indent-props": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-key": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-max-props-per-line": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-no-bind": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-no-duplicate-props": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-no-literals": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-no-undef": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-pascal-case": "Original plugin is not part of the ESLint 10 config.",
-  "react/sort-prop-types": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-sort-prop-types": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-sort-props": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-sort-default-props": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-uses-react": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-uses-vars": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-danger": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-deprecated": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-did-mount-set-state": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-did-update-set-state": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-will-update-set-state": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-direct-mutation-state": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-is-mounted": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-multi-comp": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-set-state": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-string-refs": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-unknown-property": "Original plugin is not part of the ESLint 10 config.",
-  "react/prefer-es6-class": "Original plugin is not part of the ESLint 10 config.",
-  "react/prefer-stateless-function": "Original plugin is not part of the ESLint 10 config.",
-  "react/require-render-return": "Original plugin is not part of the ESLint 10 config.",
-  "react/self-closing-comp": "Original plugin is not part of the ESLint 10 config.",
-  "react/sort-comp": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-wrap-multilines": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-first-prop-new-line": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-equals-spacing": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-indent": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-no-target-blank": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-no-comment-textnodes": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-render-return-value": "Original plugin is not part of the ESLint 10 config.",
-  "react/require-optimization": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-find-dom-node": "Original plugin is not part of the ESLint 10 config.",
-  "react/forbid-component-props": "Original plugin is not part of the ESLint 10 config.",
-  "react/forbid-elements": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-danger-with-children": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-unused-prop-types": "Original plugin is not part of the ESLint 10 config.",
-  "react/style-prop-object": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-unescaped-entities": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-children-prop": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-tag-spacing": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-space-before-closing": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-array-index-key": "Original plugin is not part of the ESLint 10 config.",
-  "react/forbid-foreign-prop-types": "Original plugin is not part of the ESLint 10 config.",
-  "react/void-dom-elements-no-children": "Original plugin is not part of the ESLint 10 config.",
-  "react/default-props-match-prop-types": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-redundant-should-component-update": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-unused-state": "Original plugin is not part of the ESLint 10 config.",
-  "react/boolean-prop-naming": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-typos": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-curly-brace-presence": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-one-expression-per-line": "Original plugin is not part of the ESLint 10 config.",
-  "react/destructuring-assignment": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-access-state-in-setstate": "Original plugin is not part of the ESLint 10 config.",
-  "react/button-has-type": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-child-element-spacing": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-this-in-sfc": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-max-depth": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-props-no-multi-spaces": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-unsafe": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-fragments": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-curly-newline": "Original plugin is not part of the ESLint 10 config.",
-  "react/state-in-constructor": "Original plugin is not part of the ESLint 10 config.",
-  "react/static-property-placement": "Original plugin is not part of the ESLint 10 config.",
-  "react/prefer-read-only-props": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-no-script-url": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-no-useless-fragment": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-adjacent-inline-elements": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-newline": "Original plugin is not part of the ESLint 10 config.",
-  "react/jsx-no-constructed-context-values": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-unstable-nested-components": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-namespace": "Original plugin is not part of the ESLint 10 config.",
-  "react/prefer-exact-props": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-arrow-function-lifecycle": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-invalid-html-attribute": "Original plugin is not part of the ESLint 10 config.",
-  "react/no-unused-class-component-methods": "Original plugin is not part of the ESLint 10 config.",
-  "require-jsdoc": "Rule is not available in ESLint 10.",
-  "valid-jsdoc": "Rule is not available in ESLint 10."
+  "react/jsx-filename-extension": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/forbid-prop-types": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-props-no-spreading": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/prop-types": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/require-default-props": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/function-component-definition": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/react-in-jsx-scope": "Obsolete with the modern JSX runtime; no replacement is needed.",
+  "jsx-a11y/accessible-emoji": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "jsx-a11y/no-onchange": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/forbid-dom-props": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-boolean-value": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-handler-names": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-no-bind": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-no-duplicate-props": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-no-literals": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-no-undef": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/sort-prop-types": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-sort-prop-types": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-sort-default-props": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-uses-react": "Obsolete with the modern JSX runtime; no replacement is needed.",
+  "react/no-is-mounted": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/no-multi-comp": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/no-set-state": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/no-string-refs": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/prefer-es6-class": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/prefer-stateless-function": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/require-render-return": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/sort-comp": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/require-optimization": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/forbid-component-props": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/forbid-elements": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/no-unescaped-entities": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/forbid-foreign-prop-types": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/default-props-match-prop-types": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/no-redundant-should-component-update": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/boolean-prop-naming": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/no-typos": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/destructuring-assignment": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/no-this-in-sfc": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-max-depth": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/jsx-fragments": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/state-in-constructor": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/static-property-placement": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/prefer-read-only-props": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/no-adjacent-inline-elements": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/prefer-exact-props": "No ESLint 10-compatible replacement is selected for this legacy rule.",
+  "react/no-arrow-function-lifecycle": "No ESLint 10-compatible replacement is selected for this legacy rule."
 };
