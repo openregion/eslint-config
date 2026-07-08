@@ -2,6 +2,9 @@
   "name": "@openregion/eslint-config",
   "version": "1.0.0",
   "description": "ESLint shared config",
+  "scripts": {
+    "test": "node --test"
+  },
 	"license": "MIT",
   "keywords": [
 		"config",
