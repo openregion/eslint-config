@@ -1,19 +1,25 @@
-# ESLint shared config
-Open Region ESLint shared config
+# Open Region XO Config
 
-## Usage
-Install package
+Shared XO config for Open Region JavaScript, TypeScript, and React projects.
+
+## Installation
 
 ```shell
-npm install --save-dev @openregion/eslint-config
+npm install --save-dev xo @openregion/eslint-config
 ```
 
-Create `.eslintrc` file with this content
+## Usage
 
-```json
-{
-  "extends": [
-    "@openregion"
-  ]
-}
+Create `xo.config.js`:
+
+```js
+export {default} from '@openregion/eslint-config';
 ```
+
+Run XO:
+
+```shell
+npx xo
+```
+
+The config enables XO's React rules and 2-space indentation. TypeScript files are handled by XO.

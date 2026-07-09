@@ -24,9 +24,7 @@ export default config;
 Consumers use it from `xo.config.js`:
 
 ```js
-import config from '@openregion/eslint-config';
-
-export default config;
+export {default} from '@openregion/eslint-config';
 ```
 
 ## Configuration
@@ -36,7 +34,7 @@ The exported config is an array compatible with XO flat configuration.
 It enables:
 
 - 2-space indentation with `space: true`.
-- React linting with `react: true`.
+- React linting by spreading `eslint-config-xo-react` into the XO config array.
 - TypeScript support through XO's built-in TypeScript handling.
 
 No old Airbnb rule overrides are carried forward. This is a major-version reset, so the XO defaults are the baseline.
@@ -44,6 +42,8 @@ No old Airbnb rule overrides are carried forward. This is a major-version reset,
 ## Dependencies
 
 Use `xo` as the primary runtime dependency of the shared config package, because consumers importing this config need the XO config shape and peer dependency behavior to resolve consistently.
+
+Use `eslint-config-xo-react` for React rules. Since XO 4 uses ESLint 10 and the React ESLint plugin ecosystem may still need compatibility wrapping, include `@eslint/compat` and wrap the React config with `fixupConfigRules`.
 
 Remove:
 

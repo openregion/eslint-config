@@ -1,32 +1,41 @@
 {
   "name": "@openregion/eslint-config",
-  "version": "1.0.0",
-  "description": "ESLint shared config",
-	"license": "MIT",
+  "version": "2.0.0",
+  "description": "Open Region XO shared config",
+  "license": "MIT",
   "keywords": [
-		"config",
-		"eslint",
-		"eslintconfig",
-		"javascript",
-		"typescript",
-		"styleguide"
+    "config",
+    "eslint",
+    "eslintconfig",
+    "javascript",
+    "typescript",
+    "styleguide",
+    "xo"
   ],
-	"main": "index.js",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
   "homepage": "https://github.com/openregion/eslint-config#readme",
   "author": {
-		"name": "Alexander Kupriyanov",
-		"email": "kupriyanov.a@openregion.info"
-	},
+    "name": "Alexander Kupriyanov",
+    "email": "kupriyanov.a@openregion.info"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/openregion/eslint-config.git"
   },
-	"dependencies" : {
-		"eslint-config-airbnb": "^19.0.4",
-		"eslint-import-resolver-typescript": "^3.6.3"
-	},
-	"peerDependencies": {
-		"eslint": "^8.57.0",
-		"typescript-eslint": "^8.4.0"
-	}
+  "dependencies": {
+    "@eslint/compat": "^2.1.0",
+    "eslint-config-xo-react": "^0.31.0",
+    "xo": "^4.0.0"
+  }
 }
